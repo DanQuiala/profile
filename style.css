@@ -1,0 +1,132 @@
+h1 {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: normal;
+  color: #575F7D;
+  font-size: 32px;
+}
+
+h2 {
+  color: #7ECE90;
+  font-size: medium;
+}
+
+i {
+  color: rgb(230, 230, 230);
+  font-size: 50px;
+}
+
+.card-white {
+  background-color: white;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+  /* 0px of Spread on X & Y axis, 30px of Blur. Black colour with a lot of transparency=0.2 */
+  /* This a  nice way to make these white elements to stand out against a white background just add these very soft shadow */
+  text-align: center;
+  /*  to move the card to the centre of the webpage to look nicer */
+  padding: 20px;
+  /* Added Internal Spacing inside the Div - Box Model */
+  margin: 20px 0;
+  /* 20px on the Top & Bottom, then 0px on the Left & Right.
+    To add Margin to give space between each div, therefore no need for Page Break=br or Horizontal Break=hr */
+  border-radius: 4px;
+  /* To make the corners of our card-white round - */
+}
+
+
+.img-circle {
+  width: 100px;
+  /* It's a square as such all sides are equal, no need to add height */
+  border-radius: 50%;
+  /* This will turn the image into a small circle */
+}
+
+.list-inline {
+  /* Now inside the list ITSELF we remove the padding.*/
+  padding: 0;
+  /* Initially the list of icons was not centred, to find the fault we used the Inspect under Chrome Dev tools, then used the Select function hoovered over li element then the image on the bottom showed us it had 40px padding*/
+}
+
+/* to put the list of icons in a horizontal line */
+.list-inline li {
+  display: inline;
+  /* select the list-inline class, then select the li elements inside the list and not the whole list */
+}
+
+/* To design the button to stop looking like a link*/
+.btn-blue {
+  background-color: lightblue;
+  /* change button colour*/
+  color: white;
+  /* change the Font or Text to white colour*/
+  text-decoration: none;
+  /* to remove the underline below the text*/
+  padding: 8px 16px;
+  /* 8px on Top & Bottom, then 16px on Left & Right. What's Padding and why it makes the button bigger???*/
+  border-radius: 4px;
+  /* For the space occupied by the button to be bigger we added a Border-Radius=Increase the size of the button*/
+
+}
+
+/* To add hover effect into Le Wagon button.
+  By creating a class btn-blue then add hover effect. Is it a Descendant selector or Children Selector? */
+.btn-blue:hover {
+  background-color: rgb(128, 169, 183);
+  /* To change the button colour*/
+}
+
+/* To wrap page content into a Container to make it Nice & Small*/
+/* We can collapse our div's on the left-handside (of the Code Editor) to see each different sectiosn better.
+  then add a div with the class .Container around all your content. apply the .Container class, this is useful to keep content inline*/
+.container {
+  width: 700px;
+  margin: 0 auto;
+  /* Top & Bottom 0, then Left & Right Auto */
+  /* No content will break out fo the container*/
+}
+
+
+.job-title-dark-grey {
+  color: black;
+  font-weight: lighter;
+}
+
+/* To add hover effect into icons on the list items.
+  How to select the icons to add hover effect, is it Descendant selector or Children Selector? */
+i:hover {
+  background-color: black;
+}
+
+body {
+  background-color: #F7F9FC;
+  color: #575F7D;
+  font-family: "Lora", serif;
+  font-size: 15px;
+  font-optical-sizing: auto;
+  font-weight: lighter;
+  font-style: normal;
+
+  @media (max-width: 960px) {
+
+    /* Here is where we write the CSS rule we want. For a screen < 960px, this CSS will be read */
+    .container {
+      width: 700px;
+    }
+  }
+
+  @media (max-width: 720px) {
+
+    /* For a screen < 720px, this CSS will be read */
+    .container {
+      width: 500px;
+    }
+  }
+
+  @media (max-width: 540px) {
+
+    /* For a screen < 540px, this CSS will be read */
+    .container {
+      width: 300px;
+    }
+  }
+
+  /* How would my profile look like in a screen size of a table ie 300px: tested it DOESN'T WORK as the container look very small using width: 150-200px */
